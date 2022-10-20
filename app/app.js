@@ -18,6 +18,7 @@ import { MongoURI, Secret } from "../config/config.js";
 
 // Import Router
 import indexRouter from "./routes/index.route.server.js";
+import movieRouter from "./routes/movies.route.server.js";
 
 // instantiate app-server
 const app = express();
@@ -49,6 +50,7 @@ app.use(
 
 // Use Routes
 app.use("/", indexRouter);
+app.use("/", movieRouter);
 
 // // run app
 // app.listen(3000);
